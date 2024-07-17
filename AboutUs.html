@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STARTAN SHOPS: About Us</title>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0" echarset="utf-8">
+	<link rel="stylesheet" type="text/css" href="AboutUs.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="Header">
+		<nav>
+			<a href="Home.html"><img src="Sources/Startan.jpg"></a>
+			<div class="Nav-links" id="NavLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="Home.html">HOME</a></li>
+					<li><a href="OurWork.html">OUR WORK</a></li>
+					<li><a href="Donation.html">DONATION</a></li>
+					<li><a href="ContactUs.html">CONTACT US</a></li>
+					<li><a href="AboutUs.html">ABOUT US</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+		<div class="TextBox">
+			<h1>Who Are We?</h1>
+			<p>Who's our founder? When and how do we start our service?<br>Still wonder? These might catch your interest!</p>
+			<a href="#AboutUs" class="VisitButton">Read More</a>
+		</div>
+	</section>
+
+	<!----- About Us ----->
+	<section class="AboutUs" id="AboutUs">
+		<h1>About Us</h1>
+		<p>The Startan Corporation, formerly known as Startan.co, was founded in 2024 by STARTAN<br>It is a non-profit community-based organization whose primary roles are those gamers and editors, especially Film Makers & Vloggers.</p>
+		<div class="Row">
+			<div class="LargeImage">
+				<img src="Sources/Windows 11.jpeg">
+			</div>
+		</div>
+		<p>Our company first was opened in Johor, Malaysia Online. Then,opened in United Stated In Online.<br>The company make in online sale only.</p>
+		<div class="Row">
+			<div class="LargeImage2">
+				<img src="Sources/Kali Linux.jpeg">
+			</div>
+		</div>
+	</section>
+
+	<!----- Footer ----->
+	<section class="Footer">
+		<h4>CONTACT US:</h4>
+		<div class="Icons">
+			<a class="fa fa-paper-plane" href="ContactUs.html"></a>
+			<a class="fa fa-instagram" href="https://www.instagram.com/divhesh_official/"></a>
+			<a class="fa fa-telegram" href="https://t.me/+Wc8B1F1KgEwwMjJl"></a>
+		</div>
+		<p>&copy; 2024 STARTAN Corporation. All Rights Reserved.</p>
+	</section>
+
+	<!----- JavaScript for Toggle Menu ----->
+	<script>
+		var NavLinks = document.getElementById("NavLinks");
+		function showMenu() {
+			NavLinks.style.right = "0";
+		}
+		function hideMenu() {
+			NavLinks.style.right = "-200px";
+		}
+	</script>
+</body>
+</html>

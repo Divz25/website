@@ -1,0 +1,399 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.Header {
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(225, 225, 225, 0.4), rgba(225, 225, 225, 0.4)), url(Sources/CatDogWallpaper.png);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+nav {
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav img {
+	width: 150px;
+}
+
+.Nav-links {
+	flex: 1;
+	text-align: right;
+}
+
+.Nav-links ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.Nav-links ul li a {
+	color: #E0AC30;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+.Nav-links ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ADD8E6;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.Nav-links ul li:hover::after {
+	width: 100%;
+}
+
+.TextBox {
+	font-family: 'Redressed', cursive;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.TextBox h1 {
+	font-size: 50px;
+	color: #C39B77;
+}
+
+.TextBox p {
+	margin: 10px 0px 40px;
+	font-size: 20px;
+	color: #777777;
+}
+
+.VisitButton {
+	display: inline-block;
+	text-decoration: none;
+	color: #C39B77;
+	border-radius: 5px;
+	border: 2px solid #C39B77;
+	padding: 12px 34px;
+	font-size: 18px;
+	background: transparent;
+	cursor: pointer;
+	position: relative;
+}
+
+.VisitButton:hover {
+	border: 2px solid #ADD8E6;
+	color: #000000;
+	background: #ADD8E6;
+	transition: 1s;
+}
+
+nav .fa {
+	display: none;
+}
+
+@media(max-width: 720px) {
+	.Nav-links {
+		position: fixed;
+		background: #000000;
+		height: 100vh;
+		width: 200px;
+		top: 0px;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+	}
+	.Nav-links ul li {
+		display: block;
+	}
+	.Nav-links ul {
+		padding: 30px;
+	}
+	nav .fa {
+		display: block;
+		color: #E0AC30;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+}
+
+
+/*----- Donation -----*/
+.Donation {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 100px;
+}
+
+form {
+	width: 83%;
+	max-width: 600px;
+}
+
+form h1 {
+	color: #C39B77;
+	font-weight: 600;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Redressed', cursive;
+}
+
+p {
+	color: #777777;
+	font-family: 'Redressed', cursive;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.Donation h3 {
+	padding-bottom: 5px;
+	color: #C39B77;
+	font-family: 'Redressed', cursive;
+}
+
+.InputGroup {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 8px;
+	padding: 5px 0;
+}
+
+.InputBox {
+	width: 100%;
+	margin-right: 12px;
+	position: relative;
+}
+
+.InputBox:last-child {
+	margin-right: 0;
+}
+
+.InputBox .icon {
+	width: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	color: #C39B77;
+	font-color: #777777;
+	background-color: transparent;
+	border-radius: 5px 0 0 5px;
+	transition: 0.5s;
+	pointer-events: none;
+	border: 2px solid #C39B77;
+	border-right: none;
+}
+
+.Name {
+	padding: 14px 10px 14px 50px;
+	width: 100%;
+	background-color: transparent;
+	outline: 0;
+	border-radius: 5px;
+	border: 2px solid #C39B77;
+	letter-spacing: 1px;
+	transition: 0.5s;
+	color: #000000;
+	font-size: 18px;
+	font-family: 'Redressed', cursive;
+}
+
+.Name:focus, .Birthday:focus {
+	-webkit-box-shadow: 0 0 2px 2px #C39B77;
+	-moz-box-shadow: 0 0 2px 1px #C39B77;
+	box-shadow: 0 0 2px 1px #C39B77;
+	border: 2px solid #C39B77;
+}
+
+.Name:focus + .icon {
+	background-color: transparent;
+	color: #000000;
+	border-right: 2px solid none;
+	border: #C39B77;
+	transition: 1s;
+}
+
+.Birthday {
+	width: 30%;
+	padding: 14px;
+	text-align: center;
+	background-color: transparent;
+	transition: 0.5s;
+	outline: none;
+	border: 2px solid #C39B77;
+	border-radius: 5px;
+	font-size: 18px;
+	font-family: 'Redressed', cursive;
+}
+
+.Radio {
+	display: none;
+}
+
+.InputBox label {
+	width: 50%;
+	padding: 14px;
+	background-color: transparent;
+	float: left;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px solid #C39B77;
+	color: #C39B77;
+	font-size: 18px;
+	font-family: 'Redressed', cursive;
+}
+
+.InputBox label:first-of-type {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: none;
+}
+
+.InputBox label:last-of-type {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.Radio:checked + label {
+	background-color: #ADD8E6;
+	box-shadow: 0 0 2px 0 #C39B77;
+	border: 2px 0px 2px 2px solid #C39B77;
+	color: #000000;
+	transition: 0.5s;
+}
+
+.InputBox select {
+	display: inline-block;
+	width: 33.32%;
+	padding: 13px;
+	background-color: transparent;
+	float: left;
+	text-align: center;
+	border-radius: 5px;
+	border: 2px solid #C39B77;
+	color: #777777;
+	font-size: 18px;
+	font-family: 'Redressed', cursive;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.InputBox select:focus {
+	outline: none;
+	background-color: transparent;
+	color: #777777;
+	text-align: center;
+	box-shadow: 0 0 2px 1px #C39B77;
+	border: 2px solid #C39B77;
+}
+
+.InputBox select:first-of-type {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: none;
+}
+
+.InputBox select:last-of-type {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: none;
+}
+
+button {
+	padding: 8px 0;
+	color: #C39B77;
+	outline: none;
+	background: transparent;
+	border-radius: 5px;
+	border: 2px solid #C39B77;
+	width: 100%;
+	cursor: pointer;
+	font-size: 18px;
+	font-family: 'Redressed', cursive;
+}
+
+button:hover {
+	border: 2px solid #ADD8E6;
+	color: #000000;
+	background: #ADD8E6;
+	transition: 1s;
+}
+
+@media(max-width: 720px) {
+	.TextBox h1 {
+		font-size: 36px;
+	}
+	.TextBox p {
+		font-size: 20px;
+	}
+	.Donation {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.InputBox input {
+		font-size: 14px;
+	}
+	.InputBox label {
+		font-size: 14px;
+	}
+	.InputBox select, option {
+		font-size: 14px;
+	}
+}
+
+
+/*----- Footer -----*/
+.Footer {
+	width: 100%;
+	text-align: center;
+	padding: 30px 0px;
+	padding-top: 120px;
+	font-family: 'Redressed', cursive;
+}
+
+.Footer h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Redressed', cursive;
+	font-weight: 600;
+}
+
+.Footer p {
+	color: #777777;
+	font-size: 16px;
+}
+
+.Icons .fa {
+	color: #E0AC30;
+	margin: 0px 10px;
+	cursor: pointer;
+	padding: 18px 0px;
+	text-decoration: none;
+}
+
+@media(max-width: 720px) {
+	.Footer p {
+		font-size: 16px;
+	}
+}

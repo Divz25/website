@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STARTAN SHOPS: Contact Us</title>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0" echarset="utf-8">
+	<link rel="stylesheet" type="text/css" href="ContactUs.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<section class="Header">
+		<nav>
+			<a href="Home.html"><img src="Sources/Startan.jpg"></a>
+			<div class="Nav-links" id="NavLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="Home.html">HOME</a></li>
+					<li><a href="OurWork.html">OUR WORK</a></li>
+					<li><a href="Donation.html">DONATION</a></li>
+					<li><a href="ContactUs.html">CONTACT US</a></li>
+					<li><a href="AboutUs.html">ABOUT US</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+		<div class="TextBox">
+			<h1>Welcome to STARTAN SHOPS Help!</h1>
+			<p>If you face any problem or have suggestions about our services<br>leave us a message and we will reply to you as soon as we can! Or we recommend to pm the admin via instagram! As per rule don't talk wrong words!</p>
+			<a href="#ContactUs" class="VisitButton">Comment</a>
+		</div>
+	</section>
+
+	<!----- Contact Us ----->
+	<section>
+		<div class="ContactUs" id="ContactUs">
+			<form onsubmit="sendEmail(); reset(); return false;">
+				<h1>STARTAN SHOPS Help</h1>
+				<div class="Name-Phone">
+					<div class="InputGroup">
+						<input type="text" id="Name" required>
+						<label for="Name"><i class="fa fa-user"></i> Name</label>
+					</div>
+					<div class="InputGroup">
+						<input type="text" id="Number" required>
+						<label for="Number"><i class="fa fa-phone-square"></i> Phone Number</label>
+					</div>
+				</div>
+				<div class="InputGroup">
+					<input type="email" id="Email" required>
+					<label for="Email"><i class="fa fa-envelope"></i> Email Address</label>
+				</div>
+				<div class="InputGroup">
+					<textarea id="Message" rows="8" required=""></textarea>
+					<label for="Message"><i class="fa fa-comments"></i> Your Message</label>
+				</div>
+				<button type="submit">Submit <i class="fa fa-paper-plane"></i></button>
+			</form>
+		</div>
+	</section>
+
+	<!----- Footer ----->
+	<section class="Footer">
+		<h4>CONTACT US:</h4>
+		<div class="Icons">
+			<a class="fa fa-paper-plane" href="ContactUs.html"></a>
+			<a class="fa fa-instagram" href="https://www.instagram.com/divhesh_official/"></a>
+			<a class="fa fa-telegram" href="https://t.me/+Wc8B1F1KgEwwMjJl"></a>
+		</div>
+		<p>&copy; 2024 STARTAN SHOPS Corporation. All Rights Reserved.</p>
+	</section>
+
+	<!----- JavaScript for Toggle Menu ----->
+	<script>
+		var NavLinks = document.getElementById("NavLinks");
+		function showMenu() {
+			NavLinks.style.right = "0";
+		}
+		function hideMenu() {
+			NavLinks.style.right = "-200px";
+		}
+	</script>
+
+	<!----- JavaScript for Feedback ----->
+	<script src=""></script>
+	<script>
+	</script>
+</body>
+</html>

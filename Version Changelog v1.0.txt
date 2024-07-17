@@ -1,0 +1,10 @@
+******* CatDog v1.0 *******
+
+Website
+- Homepage been created!
+- Our Work page been created!
+- Donation page been created!
+- Contact Us page been created!
+- About Us page been created!
+
+DATE: March 03, 2022

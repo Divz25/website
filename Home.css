@@ -1,0 +1,412 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.Header {
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(225, 225, 225, 0.4), rgba(225, 225, 225, 0.4)), url(Sources/CatDogWallpaper.png);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+nav {
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav img {
+	width: 150px;
+}
+
+.Nav-links {
+	flex: 1;
+	text-align: right;
+}
+
+.Nav-links ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.Nav-links ul li a {
+	color: #E0AC30;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+.Nav-links ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ADD8E6;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.Nav-links ul li:hover::after {
+	width: 100%;
+}
+
+.TextBox {
+	font-family: 'Redressed', cursive;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.TextBox h1 {
+	font-size: 50px;
+	color: #C39B77;
+}
+
+.TextBox p {
+	margin: 10px 0px 40px;
+	font-size: 20px;
+	color: #777777;
+}
+
+.VisitButton {
+	display: inline-block;
+	text-decoration: none;
+	color: #C39B77;
+	border-radius: 5px;
+	border: 2px solid #C39B77;
+	padding: 12px 34px;
+	font-size: 18px;
+	background: transparent;
+	cursor: pointer;
+	position: relative;
+}
+
+.VisitButton:hover {
+	border: 2px solid #ADD8E6;
+	color: #000000;
+	background: #ADD8E6;
+	transition: 1s;
+}
+
+nav .fa {
+	display: none;
+}
+
+@media(max-width: 720px) {
+	.TextBox h1 {
+		font-size: 36px;
+	}
+	.TextBox p {
+		font-size: 20px;
+	}
+	.Nav-links {
+		position: fixed;
+		background: #000000;
+		height: 100vh;
+		width: 200px;
+		top: 0px;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+	}
+	.Nav-links ul li {
+		display: block;
+	}
+	.Nav-links ul {
+		padding: 30px;
+	}
+	nav .fa {
+		display: block;
+		color: #E0AC30;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+}
+
+
+/*----- Pets -----*/
+.Pets {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+h1 {
+	font-family: 'Redressed', cursive;
+	font-size: 36px;
+	font-weight: 600;
+}
+
+p {
+	color: #777777;
+	font-family: 'Redressed', cursive;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.Row {
+	color: #E0AC30;
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.PetsOffer {
+	flex-basis: 38%;
+	background: #F3E7D4;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+.PetsOffer:hover {
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.PetsOffer li {
+	color: #777777;
+	list-style: none;
+	font-family: 'Redressed', cursive;
+}
+
+h3 {
+	text-align: center;
+	font-family: 'Redressed', cursive;
+	font-weight: 600;
+	margin: 10px 0px;
+}
+
+@media(max-width: 720px) {
+	.Pets {
+		padding-top: 50px;
+	}
+	.Row {
+		flex-direction: column;
+	}
+}
+
+
+/*----- Branches -----*/
+.Branches {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.PetsBranches {
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	position: relative;
+	overflow: hidden;
+}
+
+.PetsBranches img {
+	width: 100%;
+	display: block;
+}
+
+.Layer {
+	font-family: 'Redressed', cursive;
+	color: #E0AC30;
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.Layer:hover {
+	background: rgba(60, 60, 60, 0.5);
+}
+
+.Layer h3 {
+	width: 100%;
+	font-weight: 500;
+	color: #E0AC30;
+	font-size: 22px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-86%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.Layer:hover h3 {
+	bottom: 92%;
+	opacity: 1;
+}
+
+@media(max-width: 720px) {
+	.Branches {
+		padding-top: 50px;
+	}
+}
+
+
+/*----- Facilities -----*/
+.Facilities {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.PetsFacilities {
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+}
+
+.PetsFacilities img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.PetsFacilities p {
+	padding: 0;
+}
+
+.PetsFacilities h3 {
+	margin-top: 16px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+@media(max-width: 720px) {
+	.Facilities {
+		padding-top: 50px;
+	}
+}
+
+
+/*----- Customers -----*/
+.Customers {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.PetsCustomers {
+	flex-basis: 38%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+	background: #F3E7D4;
+	padding: 25px;
+	cursor: pointer;
+	display: flex;
+}
+
+.PetsCustomers img {
+	height: 40px;
+	margin-left: 5px;
+	margin-right: 30px;
+	border-radius: 50%;
+}
+
+.PetsCustomers p {
+	padding: 0;
+}
+
+.PetsCustomers h3 {
+	margin-top: 15px;
+	text-align: left;
+}
+
+@media(max-width: 720px) {
+	.Customers {
+		padding-top: 50px;
+	}
+	.PetsCustomers img {
+		margin-left: 0px;
+		margin-right: 15px;
+	}
+}
+
+
+/*----- Membership -----*/
+.Membership {
+	margin: 100px auto;
+	width: 80%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Sources/SignUpWallpaper.png);
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0px;
+	font-family: 'Redressed', cursive;
+}
+
+.Membership h1 {
+	color: #FFFFFF;
+	margin-bottom: 40px;
+	padding: 0px;
+}
+
+@media(max-width: 720px) {
+	.Membership {
+		padding-top: 50px;
+	}
+	.Membership h1 {
+		font-size: 18px;
+	}
+}
+
+
+/*----- Footer -----*/
+.Footer {
+	width: 100%;
+	text-align: center;
+	padding: 30px 0px;
+	padding-top: 120px;
+	font-family: 'Redressed', cursive;
+}
+
+.Footer h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Redressed', cursive;
+	font-weight: 600;
+}
+
+.Footer p {
+	color: #777777;
+	font-size: 16px;
+}
+
+.Icons .fa {
+	color: #E0AC30;
+	margin: 0px 10px;
+	cursor: pointer;
+	padding: 18px 0px;
+	text-decoration: none;
+}
+
+@media(max-width: 720px) {
+	.Footer p {
+		font-size: 16px;
+	}
+}
